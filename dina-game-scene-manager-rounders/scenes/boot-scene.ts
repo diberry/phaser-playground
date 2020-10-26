@@ -3,13 +3,14 @@ export class BootScene extends Phaser.Scene {
     private message;
     
     constructor() {
+        console.log("boot-scene");
         super({
             key: "BootScene"
         });
     }
     init(data): void {
-        console.log(`BootScene init ${JSON.stringify(data)}`);
-        this.message = data.message;
+        //console.log(`BootScene init ${JSON.stringify(data)}`);
+        //this.message = data.message;
     }
     preload(): void {
         console.log(`BootScene preload`);
