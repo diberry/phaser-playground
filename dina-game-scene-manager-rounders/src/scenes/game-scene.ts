@@ -91,7 +91,7 @@ export class GameScene extends SceneBase {
         
         // get player's current angle
         // calc min and max enemy angle
-        Phaser.Math.
+        //Phaser.Math.
         // set enemy at random angle
     }
     createPlayer() {
