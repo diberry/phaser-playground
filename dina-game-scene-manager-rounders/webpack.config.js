@@ -3,16 +3,20 @@ var pathToPhaser = path.join(__dirname, "/node_modules/phaser/");
 var phaser = path.join(pathToPhaser, "dist/phaser.js");
 
 module.exports = {
-    entry: "./app.ts",
+    entry: "./src/app.ts",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        
     },
     module: {
         rules: [
             { test: /\.ts$/, loader: "ts-loader", exclude: "/node_modules/" },
             { test: /phaser\.js$/, loader: "expose-loader?Phaser" }
         ]
+    },
+    watchOptions: {
+        ignored: [ 'node_modules/**']
     },
     devServer: {
         contentBase: path.resolve(__dirname, "./"),
@@ -21,6 +25,7 @@ module.exports = {
         port: 8080,
         open: true
     },
+    devtool: 'cheap-source-map',
     resolve: {
         extensions: [".ts", ".js"],
         alias: {

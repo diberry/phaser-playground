@@ -1,9 +1,17 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "module": "commonjs",
+        "target": "ES5",
+        "module": "CommonJS",
         "sourceMap": true,
         "noImplicitAny": false,
-        "strict": false
+        "strict": false,
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "lib": [
+            "ES5",
+            "DOM",
+            "ES2015.Promise",
+            "ScriptHost"
+        ]
     }
 }
